@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Form del wizard: se elige el rango y se exporta -->
+    <record id="view_reporte_ventas_uo_wizard_form" model="ir.ui.view">
+        <field name="name">yaguven.reporte.ventas.uo.wizard.form</field>
+        <field name="model">yaguven.reporte.ventas.uo.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Ventas por Unidad Operativa">
+                <group>
+                    <field name="date_from"/>
+                    <field name="date_to"/>
+                    <field name="company_id"
+                           groups="base.group_multi_company"/>
+                </group>
+                <footer>
+                    <button name="action_export_excel" type="object"
+                            string="Exportar Excel" class="btn-primary"/>
+                    <button string="Cancelar" class="btn-secondary"
+                            special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_reporte_ventas_uo_wizard" model="ir.actions.act_window">
+        <field name="name">Ventas por Unidad Operativa</field>
+        <field name="res_model">yaguven.reporte.ventas.uo.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem
+        id="menu_reporte_ventas_uo"
+        name="Ventas por Unidad Operativa"
+        parent="account.menu_finance_reports"
+        action="action_reporte_ventas_uo_wizard"
+        sequence="90"/>
+
+</odoo>
