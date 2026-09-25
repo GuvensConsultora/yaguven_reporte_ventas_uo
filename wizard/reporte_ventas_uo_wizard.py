@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 import io
-import base64
 from collections import defaultdict
 
 from odoo import models, fields, _
@@ -167,7 +166,7 @@ class ReporteVentasUoWizard(models.TransientModel):
         attachment = self.env['ir.attachment'].create({
             'name': filename,
             'type': 'binary',
-            'datas': base64.b64encode(output.getvalue()),
+            'raw': output.getvalue(),
             'mimetype': (
                 'application/vnd.openxmlformats-officedocument'
                 '.spreadsheetml.sheet'

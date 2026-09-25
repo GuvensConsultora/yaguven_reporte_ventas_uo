@@ -1,2 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_reporte_ventas_uo_wizard,reporte.ventas.uo.wizard.contable,model_yaguven_reporte_ventas_uo_wizard,account.group_account_invoice,1,1,1,1
