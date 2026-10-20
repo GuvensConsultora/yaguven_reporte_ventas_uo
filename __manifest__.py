@@ -18,7 +18,7 @@ corte por Unidad Operativa (sucursal) y por fecha.
 - Los tickets se cuentan sólo sobre las facturas; las NC restan del importe pero no son
   un ticket generado. Cada ticket de POS emite su factura, así que queda incluido.
 """,
-    "version": "20.0.1.1.0",
+    "version": "20.0.1.2.0",
     "category": "Accounting",
     "author": "Yagüven C.G.",
     "license": "LGPL-3",

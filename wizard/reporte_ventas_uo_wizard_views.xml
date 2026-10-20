@@ -30,12 +30,22 @@
         <field name="target">new</field>
     </record>
 
+    <!-- Menú propio y no una entrada dentro de Contabilidad: es donde lo tenían en el sistema
+         anterior (`lupatini_reporte_diario.menu_ventas_uo_root`, secuencia 50) y donde la persona
+         que lo usa lo busca. Se replica la misma estructura: raíz «Ventas por U.O.» con el reporte
+         adentro, las dos limitadas al grupo. -->
+    <menuitem
+        id="menu_reporte_ventas_uo_root"
+        name="Ventas por U.O."
+        groups="group_reporte_ventas_uo"
+        sequence="50"/>
+
     <menuitem
         id="menu_reporte_ventas_uo"
         name="Ventas por Unidad Operativa"
-        parent="account.menu_finance_reports"
+        parent="menu_reporte_ventas_uo_root"
         action="action_reporte_ventas_uo_wizard"
         groups="group_reporte_ventas_uo"
-        sequence="90"/>
+        sequence="10"/>
 
 </odoo>
