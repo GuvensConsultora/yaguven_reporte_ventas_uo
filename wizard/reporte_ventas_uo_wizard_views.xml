@@ -35,6 +35,7 @@
         name="Ventas por Unidad Operativa"
         parent="account.menu_finance_reports"
         action="action_reporte_ventas_uo_wizard"
+        groups="group_reporte_ventas_uo"
         sequence="90"/>
 
 </odoo>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- El reporte de venta por sucursal no lo ve todo el personal: en el sistema anterior el
+         cliente lo tenía limitado a cuatro personas (`lupatini_reporte_diario.group_reporte_ventas_uo`)
+         y acá se replica esa decisión. Quiénes integran el grupo se carga desde la UI, no en XML:
+         son usuarios del cliente y cambian.
+
+         Va SIN `privilege_id` a propósito. En Odoo 20 los grupos que comparten privilegio se eligen
+         entre sí en la ficha del usuario, así que ponerlo en el privilegio «Contabilidad» —el de
+         «Facturación»— convertiría este permiso extra en un reemplazo del acceso contable. -->
+    <record id="group_reporte_ventas_uo" model="res.groups">
+        <field name="name">Reporte Ventas por Unidad Operativa</field>
+    </record>
+
+</odoo>
